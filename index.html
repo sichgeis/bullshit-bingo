@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Bullshit Bingo – LLM-Edition 🤡</title>
-
 <style>
   body, html {
     height: 100%;
@@ -25,6 +22,7 @@
     gap: 10px;
     width: 80%;
     max-width: 500px;
+    position: relative; /* Set to relative to use as reference for absolute child */
     aspect-ratio: 1 / 1; /* Ensures the overall grid is square */
   }
   .tile {
@@ -36,6 +34,7 @@
     aspect-ratio: 1 / 1; /* Ensures each tile is square */
     cursor: pointer;
     perspective: 1000px;
+    transition: transform 0.6s, z-index 0.6s 0s; /* Update transition */
   }
   .tile-inner {
     position: relative;
@@ -46,7 +45,7 @@
     transform-style: preserve-3d;
   }
   .tile.flipped .tile-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(540deg) scale(5); /* Apply rotation and scale */
   }
   .front, .back {
     position: absolute;
@@ -62,21 +61,20 @@
     background-color: #007BFF;
     color: white;
     transform: rotateY(180deg);
+    font-size: .6rem;
   }
 </style>
 </head>
-
 <body>
 <h1>Flip Tiles</h1>
 <div class="grid">
   <!-- JavaScript will inject tiles here -->
 </div>
-
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const grid = document.querySelector('.grid');
   for (let i = 0; i < 25; i++) {
-    grid.appendChild(createTile(i*i));
+    grid.appendChild(createTile(i));
   }
 });
 
@@ -89,23 +87,31 @@ function createTile(index) {
 
   const front = document.createElement('div');
   front.className = 'front';
-  front.textContent = `Tile ${index + 1}`;
+  front.textContent = `Prompt`;
 
   const back = document.createElement('div');
   back.className = 'back';
-  back.textContent = `Back of Tile ${index + 1}`;
+  back.textContent = `Eine Eingabe oder Anfrage an ein KI-Modell, die als Startpunkt dient, um eine spezifische Antwort oder Ergebnis zu generieren.`;
 
   inner.appendChild(front);
   inner.appendChild(back);
   tile.appendChild(inner);
 
   tile.addEventListener('click', () => {
-    tile.classList.toggle('flipped');
+    // Ensure only one tile can be flipped at a time
+    document.querySelectorAll('.tile').forEach((otherTile) => {
+      if (otherTile !== tile) {
+        otherTile.style.zIndex = '0'; // Reset z-index for all tiles
+        otherTile.classList.remove('flipped'); // Unflip all other tiles
+      } else {
+        tile.style.zIndex = '1000';
+        tile.classList.toggle('flipped');
+      }
+    });
   });
 
   return tile;
 }
 </script>
-
 </body>
 </html>
