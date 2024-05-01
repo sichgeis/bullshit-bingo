@@ -1,79 +1,25 @@
 Domain Specific Learning: Lernprozesse, die auf eine spezifische Domäne oder ein spezifisches Wissensgebiet ausgerichtet sind. Es wird darauf abgezielt, Modelle zu trainieren, die auf bestimmte Anwendungen oder Szenarien spezialisiert sind.
-
 Prompt: Eine Eingabe oder Anfrage an ein KI-Modell, die als Startpunkt dient, um eine spezifische Antwort oder Ergebnis zu generieren.
-
 Training: Der Prozess, bei dem ein künstliches neuronales Netzwerk anhand von Daten und Algorithmen trainiert wird, um Muster zu erkennen und spezifische Aufgaben auszuführen.
-
 Context-Injection: Das Einbringen zusätzlicher, relevanter Informationen in das KI-Modell, um die Qualität der Antwort oder Vorhersage zu verbessern.
-
 Pre-Training: Die Phase, in der ein KI-Modell mit einer großen Menge an allgemeinen Daten vor dem Feinabstimmen auf spezifische Aufgaben trainiert wird.
-
 Fine-Tuning: Anpassung eines bereits vortrainierten Modells an eine spezifische Aufgabe oder einen spezifischen Datensatz, um die Leistungsfähigkeit auf diese spezielle Anwendung zu optimieren.
-
 Zero-Shot Learning: Ein Ansatz im maschinellen Lernen, bei dem ein Modell Aufgaben ausführen kann, für die es keine spezifischen Trainingsdaten erhalten hat.
-
 Few-Shot Learning: Lernmethode, bei der das Modell nur mit einer sehr begrenzten Anzahl von Beispielen für jede Klasse trainiert wird.
-
 One-Shot Learning: Ein Ansatz, bei dem ein Modell aus nur einem einzigen Trainingsbeispiel pro Klasse lernen kann.
-
 RAG (Retrieval-Augmented Generation): Ein Ansatz in der generativen KI, der Daten aus externen Quellen abruft, um informative und präzisere Antworten zu generieren.
-
 Open Source Model: Ein KI-Modell, dessen Code und Trainingssätze öffentlich zugänglich und für die Nutzung und Modifikation durch die Gemeinschaft freigegeben sind.
-
 Proprietary Model: Ein kommerzielles KI-Modell, das von einem Unternehmen entwickelt wurde und dessen Nutzung typischerweise Lizenzgebühren oder bestimmte Nutzungsbedingungen unterliegt.
-
 Function Calling: In KI-Systemen die Fähigkeit, spezifische Funktionen oder Prozeduren innerhalb des Modells oder von externen Diensten auf Anfrage auszuführen.
-
 Vector Datenbank: Spezialisierte Datenbank zur Speicherung und schnellen Suche von Vektoren, die in maschinellen Lernprozessen genutzt werden.
-
 Long-Term Memory: Langzeitgedächtnis in KI-Systemen, das Informationen über längere Zeit speichert und zur Verbesserung der Leistung bei zukünftigen Aufgaben nutzt.
-
 Agents: Autonome Einheiten oder Softwareprogramme, die in der Lage sind, in einer Umgebung selbstständige Entscheidungen zu treffen und Aufgaben auszuführen.
-
-Base Model vs. Instruct Model: Unterscheidung zwischen einem grundlegenden KI-Modell und einem speziell angepassten Modell, das für die Ausführung von instruierten Aufgaben optimiert ist.
-
 Hallucinations: Falsche oder erfundene Informationen, die von einem KI-Modell generiert werden, oft als Resultat von Unsicherheiten im Trainingsdatensatz oder mangelnder Robustheit des Modells.
-
 Inference Speed: Die Geschwindigkeit, mit der ein KI-Modell Eingaben verarbeitet und Antworten generiert.
-
-Cost: Die Kosten, die mit dem Training, der Wartung und dem Betrieb von KI-Systemen verbunden sind.
-
 Time To First Token: Die Zeit, die ein KI-Modell benötigt, um das erste Token (Wort oder Symbol) in einer Sequenz zu generieren.
-
 Coding Agents: Spezialisierte Agenten in KI-Systemen, die für die Erstellung und Modifikation von Code zuständig sind.
-
-Llama 3: Eine spezifische Version eines Large Language Models, das für verschiedene Aufgaben im Bereich des maschinellen Lernens eingesetzt wird.
-
-Groq: Ein Unternehmen, das spezialisierte Hardware für die Beschleunigung von KI-Berechnungen entwickelt.
-
-Latency: Die Verzögerung zwischen dem Eingang eines Signals oder einer Anfrage an ein KI-System und der Antwort des Systems.
-
-Activation Function: Eine Funktion in einem neuronalen Netzwerk, die bestimmt, ob ein Neuron aktiviert wird oder nicht, indem sie den gewichteten Input in den Output des Neurons umwandelt.
-
-Backpropagation: Ein Algorithmus zum Training von neuronalen Netzwerken, der den Fehler von der Ausgabe zurück zum Netzwerk leitet, um die Gewichte effizient anzupassen.
-
-Convolutional Neural Network (CNN): Ein Typ von tiefen neuronalen Netzwerken, der häufig in der Bild- und Videobearbeitung verwendet wird und speziell darauf ausgelegt ist, räumliche Hierarchien von Merkmalen zu erkennen.
-
-Embedding: Die Darstellung von hochdimensionalen Daten (wie Wörtern oder Bildern) in einem niedrigdimensionalen, kontinuierlichen Vektorraum, der oft verwendet wird, um relationale Ähnlichkeiten zwischen den Datenpunkten zu erfassen.
-
-Generative Adversarial Network (GAN): Ein Typ von künstlichem neuronalen Netzwerk, das aus zwei Modellen besteht, einem Generator, der Daten generiert, und einem Diskriminator, der die Echtheit der Daten beurteilt, um hochqualitative künstliche Daten zu erzeugen.
-
 Knowledge Distillation: Ein Verfahren, bei dem Wissen von einem umfangreichen, komplexen Modell zu einem kleineren, effizienteren Modell übertragen wird.
-
-Loss Function: Eine Funktion, die den Fehler oder die Differenz zwischen den vorhergesagten Ausgaben eines Modells und den tatsächlichen Ausgaben misst. Sie wird während des Trainings verwendet, um das Modell zu optimieren.
-
-Natural Language Processing (NLP): Ein Bereich der KI, der sich mit der Interaktion zwischen Computern und menschlicher (natürlicher) Sprache befasst, insbesondere wie man Computern das Lesen und Verstehen menschlicher Sprache beibringt.
-
-Neural Architecture Search (NAS): Ein Bereich des maschinellen Lernens, der Algorithmen verwendet, um die beste Architektur für ein neuronales Netzwerk automatisch zu entwerfen.
-
-Recurrent Neural Network (RNN): Ein Typ von neuronalen Netzwerken, die besonders gut für sequentielle Daten wie Sprache und Text geeignet sind, da sie Informationen über die Zeit hinweg speichern können.
-
 Reinforcement Learning: Ein Bereich des maschinellen Lernens, bei dem Algorithmen trainiert werden, optimale Handlungen auf Basis von Belohnungen und Strafen zu wählen, um ein bestimmtes Ziel zu erreichen.
-
-Semantic Segmentation: Der Prozess der Zuordnung eines Labels zu jedem Pixel in einem Bild, so dass Pixel mit demselben Label zur gleichen Objektkategorie gehören.
-
 Transformer: Ein Architekturtyp für neuronale Netzwerke, der besonders in der Verarbeitung von Sequenzen (z.B. Text) leistungsstark ist und auf Selbst-Attention-Mechanismen basiert.
-
 Unsupervised Learning: Ein Typ des maschinellen Lernens, bei dem das Modell aus Daten ohne vorherige Labels lernt, um Muster und Strukturen eigenständig zu erkennen.
-
 Word Embedding: Die Darstellung von Wörtern in einem Vektorraum, die es ermöglicht, semantische Ähnlichkeiten zwischen verschiedenen Wörtern basierend auf ihrem Kontext zu erfassen.
