@@ -17,7 +17,7 @@ defineProps<{
   align-items: center;
   display: flex;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1;
   text-align: center;
   padding: 1rem;
 }

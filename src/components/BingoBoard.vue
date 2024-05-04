@@ -40,6 +40,6 @@ const titleList = [
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  gap: 0.7rem;
 }
 </style>
