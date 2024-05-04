@@ -1,22 +1,24 @@
 <template>
   <div class="card" @click="toggleFlipped">
-    <div v-if="isFlipped">{{ text }}</div>
-    <div v-else>{{ title }}</div>
+    {{ title }}
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
-defineProps<{
+const props = defineProps<{
   title: string;
-  text: string;
+  index: number;
 }>()
+const emit = defineEmits(['flipped']);
 
 const isFlipped = ref(false)
 
 const toggleFlipped = () => {
   isFlipped.value = !isFlipped.value
+
+  emit('flipped', props.index)
 }
 </script>
 
@@ -29,6 +31,11 @@ const toggleFlipped = () => {
   width: 100%;
   aspect-ratio: 1;
   text-align: center;
-  padding: 1rem;
+
+  @media only screen and (max-width: 600px) {
+    font-size: xx-small;
+  }
+
+  /* padding: 1rem; */
 }
 </style>

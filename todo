@@ -1,9 +1,9 @@
 Bullshit Bingo Todos:
   - css grid checken und verbessern @done
-  - toggle title and text on click on card
+  - toggle title and text on click on card @done
   - add a header with an instuction and title
   - make it pretty
   - make the cards flip (with a css transformation)
-  - make flipped card move to center and expand
+  - make flipped card move to center and expand @done
   - mark clicked cards
   - change favicon

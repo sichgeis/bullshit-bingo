@@ -1,11 +1,16 @@
 <template>
-  <div class="container">
-    <BingoCard v-for="i in 25" :title="titleList[i - 1]" :text="textList[i - 1]" />
+  <div class="board">
+    <BingoCard v-for="(title, idx) in titleList" :index="idx" :title="title" @flipped="onFlipped" />
+  </div>
+  <div v-if="showDetailModal" class="modal" @click="showDetailModal = false">
+    <BingoCardDetail class="modal-content" :title="titleList[index]" :text="textList[index]" />
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import BingoCard from './BingoCard.vue'
+import BingoCardDetail from './BingoCardDetail.vue'
 
 const titleList = [
   'Domain Specific Learning',
@@ -62,12 +67,39 @@ const textList = [
   'Ein Typ des maschinellen Lernens, bei dem das Modell aus Daten ohne vorherige Labels lernt, um Muster und Strukturen eigenständig zu erkennen.',
   'Die Darstellung von Wörtern in einem Vektorraum, die es ermöglicht, semantische Ähnlichkeiten zwischen verschiedenen Wörtern basierend auf ihrem Kontext zu erfassen.',
 ]
+
+const showDetailModal = ref(false)
+const index = ref<number | undefined>(undefined)
+
+const onFlipped = (idx: number) => {
+  console.log(`es wurde auf den index ${idx} gedrückt`);
+  index.value = idx;
+  showDetailModal.value = true;
+}
 </script>
 
 <style scoped>
-.container {
+.board {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0.7rem;
+
+  @media only screen and (max-width: 600px) {
+    gap: 0.2rem;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.modal-content {
+  margin: 15% auto;
 }
 </style>
