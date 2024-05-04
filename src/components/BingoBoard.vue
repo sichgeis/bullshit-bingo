@@ -2,7 +2,7 @@
   <div class="board">
     <BingoCard v-for="(title, idx) in titleList" :index="idx" :title="title" @flipped="onFlipped" />
   </div>
-  <div v-if="showDetailModal" class="modal" @click="showDetailModal = false">
+  <div v-if="showDetailModal && index !== undefined" class="modal" @click="showDetailModal = false">
     <BingoCardDetail class="modal-content" :title="titleList[index]" :text="textList[index]" />
   </div>
 </template>
