@@ -1,13 +1,23 @@
 <template>
-  <div class="card">
-    {{ title }}
+  <div class="card" @click="toggleFlipped">
+    <div v-if="isFlipped">{{ text }}</div>
+    <div v-else>{{ title }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
 defineProps<{
-  title: string
+  title: string;
+  text: string;
 }>()
+
+const isFlipped = ref(false)
+
+const toggleFlipped = () => {
+  isFlipped.value = !isFlipped.value
+}
 </script>
 
 <style scoped>
